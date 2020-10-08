@@ -1,0 +1,24 @@
+<div class="row ">
+    <div class="col-12 text-center">
+        <h2>ALTA</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <label class="label-control">Nombre</label>
+    </div>
+    <input type="text" [(ngModel)]='user.nombre'>
+</div>
+<div class="row">
+    <div class="col-3">
+        <label class="label-control">Apellido</label>
+    </div>
+    <input type="text" [(ngModel)]='user.apellido'>
+</div>
+<div class="row">
+    <div class="col-3">
+        <label class="label-control">Email</label>
+    </div>
+    <input type="text" [(ngModel)]='user.email'>
+</div>
+<button class="btn btn-primary btn-block mt-2" (click)='onGuardar(user)'>Guardar</button>

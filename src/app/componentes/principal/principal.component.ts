@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { element } from 'protractor';
 import { Usuario } from 'src/app/clases/usuario';
 import { MidbService } from 'src/app/servicio/midb.service';
 
@@ -10,28 +11,28 @@ import { MidbService } from 'src/app/servicio/midb.service';
 export class PrincipalComponent implements OnInit {
   public user = new Usuario();
   public usuarios = [];
+  public detalle = new Usuario;
+  public modificar = new Usuario;
   constructor(public db: MidbService) { }
 
   ngOnInit(): void {
-    this.db.getdb('usuarios').snapshotChanges().subscribe(listaTabla =>{ 
+    this.db.getdb('nombre').snapshotChanges().subscribe(listaTabla => {
       this.usuarios = [];
       listaTabla.forEach(element => {
-        const x= element.payload.toJSON();
-        x['$key']=element.key;
+        const x = element.payload.toJSON();
+        x['$key'] = element.key;
         this.usuarios.push(x);
-      })
-    }
-      );
-  }
-  onGuardar(objeto:object){
-    this.db.setdb(objeto)
-  }
-  onBorrar(objeto:object){
-      this.db.deletedb(objeto['$key']);
+      });
+      console.log(this.usuarios.length);
+    });
+    // lleno la base con datos desde mock
+    // this.db.mockAlta('nombre');
   }
   onModificar(objeto:object){
-  
+    this.modificar = objeto as Usuario;
   }
-
-
+  onDetalle(objeto:object){
+    this.detalle = objeto as Usuario;
+  }
+  
 }

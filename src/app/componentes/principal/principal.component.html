@@ -1,33 +1,15 @@
-<div class="container">
-    <table class="table table-bordered table-dark">
-        <thead>
-            <tr>
-                <th scope="col">NOMBRE</th>
-                <th scope="col">APELLIDO</th>
-                <th scope="col">EMAIL</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor='let usuario of usuarios'>
-                <td>{{usuario.nombre}}</td>
-                <td>{{usuario.apellido}}</td>
-                <td>{{usuario.email}}</td>
-                <td><button class="btn btn-success mx-2" (click)='onBorrar(usuario)'>borrar</button></td>
-                <td><button class="btn btn-success mx-2" (click)='onModificar(usuario)'>modificar</button></td>
-            </tr>
-        </tbody>
-    </table>
-        <div class="row">
-            <label class="label-control">Nombre</label>
-            <input type="text" [(ngModel)]='user.nombre'>
+<app-navbar></app-navbar>
+<div class="container mt-2">
+    <app-tabla [usuarios]='usuarios' (detalle)='onDetalle($event)' (modificar)='onModificar($event)'></app-tabla>
+    <div class="row">
+        <div class="col-4">
+            <app-alta></app-alta>
         </div>
-        <div class="row">
-            <label class="label-control">Apellido</label>
-            <input type="text" [(ngModel)]='user.apellido'>
+        <div class="col-4">
+            <app-detalle [usuario]='detalle'></app-detalle>
         </div>
-        <div class="row">
-            <label class="label-control">Email</label>
-            <input type="text" [(ngModel)]='user.email'>
+        <div class="col-4">
+            <app-modificar [user]='modificar'></app-modificar>
         </div>
-        <button class="btn btn-primary " (click)='onGuardar(user)'>Guardar</button>
+    </div>
 </div>
