@@ -12,7 +12,7 @@ export class ModificarComponent implements OnInit {
   constructor(public db: MidbService) { }
 
   ngOnInit(): void {
-    this.db.getdb('nombre');
+    this.db.getdb('paises');
   }
   onModificar(objeto:object){
     const x = objeto as Usuario;

@@ -14,6 +14,8 @@ import { TablaComponent } from './componentes/tabla/tabla.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { DetalleComponent } from './componentes/detalle/detalle.component';
 import { ModificarComponent } from './componentes/modificar/modificar.component';
+import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
+import { AltaActorComponent } from './componentes/alta-actor/alta-actor.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ModificarComponent } from './componentes/modificar/modificar.component'
     TablaComponent,
     NavbarComponent,
     DetalleComponent,
-    ModificarComponent
+    ModificarComponent,
+    TablaPaisesComponent,
+    AltaActorComponent
   ],
   imports: [
     BrowserModule,

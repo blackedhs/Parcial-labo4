@@ -1,0 +1,21 @@
+<div class="container">
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">REGION</th>
+                <th scope="col">EMAIL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let pais of paises' (click)='onPais(pais)'>
+                <td>{{pais.name}}</td>
+                <td>{{pais.region}}</td>
+                <td><img [src]="pais.flag" alt="" class='imagen'></td>
+                <!-- <td><button class="btn btn-success mx-auto d-block" (click)='onBorrar(usuario)'>Borrar</button></td>
+                <td><button class="btn btn-success mx-auto d-block" (click)='onModificar(usuario)'>Modificar</button></td>
+                <td class=""><button class="btn btn-success mx-auto d-block" (click)='onDetalle(usuario)'>Detalle</button></td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>

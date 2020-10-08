@@ -1,7 +1,12 @@
 <app-navbar></app-navbar>
 <div class="container mt-2">
-    <app-tabla [usuarios]='usuarios' (detalle)='onDetalle($event)' (modificar)='onModificar($event)'></app-tabla>
     <div class="row">
+        <div class="col-12">
+            <app-alta-actor [paisSelect]='paisSelected'></app-alta-actor>
+        </div>
+    </div>
+    <!-- <app-tabla [usuarios]='usuarios' (detalle)='onDetalle($event)' (modificar)='onModificar($event)'></app-tabla> -->
+    <!-- <div class="row">
         <div class="col-4">
             <app-alta></app-alta>
         </div>
@@ -11,5 +16,5 @@
         <div class="col-4">
             <app-modificar [user]='modificar'></app-modificar>
         </div>
-    </div>
+    </div> -->
 </div>

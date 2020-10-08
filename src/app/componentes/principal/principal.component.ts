@@ -10,23 +10,24 @@ import { MidbService } from 'src/app/servicio/midb.service';
 })
 export class PrincipalComponent implements OnInit {
   public user = new Usuario();
+  public paises = [];
+  public paisSelected:any;
   public usuarios = [];
   public detalle = new Usuario;
   public modificar = new Usuario;
   constructor(public db: MidbService) { }
 
   ngOnInit(): void {
-    this.db.getdb('nombre').snapshotChanges().subscribe(listaTabla => {
-      this.usuarios = [];
-      listaTabla.forEach(element => {
-        const x = element.payload.toJSON();
-        x['$key'] = element.key;
-        this.usuarios.push(x);
-      });
-      console.log(this.usuarios.length);
-    });
+    // this.db.getdb('paises').snapshotChanges().subscribe(listaTabla => {
+    //   this.paises = [];
+    //   listaTabla.forEach(element => {
+    //     const x = element.payload.toJSON();
+    //     x['$key'] = element.key;
+    //     this.paises.push(x);
+    //   });
+    // });
     // lleno la base con datos desde mock
-    // this.db.mockAlta('nombre');
+    // this.db.mockAlta('paises');  
   }
   onModificar(objeto:object){
     this.modificar = objeto as Usuario;
@@ -34,5 +35,4 @@ export class PrincipalComponent implements OnInit {
   onDetalle(objeto:object){
     this.detalle = objeto as Usuario;
   }
-  
 }

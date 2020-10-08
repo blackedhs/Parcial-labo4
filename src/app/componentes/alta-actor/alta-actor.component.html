@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-6">
+        
+        <div class="row ">
+            <div class="col-12 text-center">
+        <h2>ALTA ACTOR</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <label class="label-control">Nombre</label>
+    </div>
+    <input type="text" [(ngModel)]='actor.nombre'>
+</div>
+<div class="row">
+    <div class="col-3">
+        <label class="label-control">Apellido</label>
+    </div>
+    <input type="text" [(ngModel)]='actor.apellido'>
+</div>
+<div class="row">
+    <div class="col-3">
+        <label class="label-control">sexo</label>
+    </div>
+    <input type="text" [(ngModel)]='actor.sexo'>
+</div>
+<div class="row">
+    <div class="col-3">
+        <label class="label-control">Fecha de nacimiento</label>
+    </div>
+    <input type="text" [(ngModel)]='actor.fecha'>
+</div>
+<div class="row">
+    <div class="col-3">
+        <label class="label-control">Nacionalidad</label>
+    </div>
+    <input type="text" [(ngModel)]='actor.nacionalidad'>
+</div>
+<button class="btn btn-primary btn-block mt-2" (click)='onGuardar(actor)'>Guardar</button>
+</div>
+<div class="col-6">
+    <app-tabla-paises (paisSelected)='onTablaPais($event)'></app-tabla-paises>
+</div>
+</div>

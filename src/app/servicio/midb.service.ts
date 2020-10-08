@@ -25,13 +25,16 @@ export class MidbService {
   }
   mockAlta(coleccion: string) {
     this.getdb(coleccion);
-    const x = this.http.get('https://my.api.mockaroo.com/nombre.json?key=a90b84e0').subscribe(element =>
+    const x = this.http.get('https://restcountries.eu/rest/v2/region/europe').subscribe(element =>
       this.mockList = element);
     setTimeout(() => {
-      this.mockList.forEach(element => {
+      this.mockList.forEach(element => {  
         this.setdb(element);
       });
     }, 4000)
     return this.list;
+  }
+  mock(){
+    return this.http.get('https://restcountries.eu/rest/v2/region/europe');
   }
 }
