@@ -18,7 +18,7 @@ export class PrincipalComponent implements OnInit {
   constructor(public db: MidbService) { }
 
   ngOnInit(): void {
-    // this.db.getdb('paises').snapshotChanges().subscribe(listaTabla => {
+    // this.db.getdb('actores').snapshotChanges().subscribe(listaTabla => {
     //   this.paises = [];
     //   listaTabla.forEach(element => {
     //     const x = element.payload.toJSON();

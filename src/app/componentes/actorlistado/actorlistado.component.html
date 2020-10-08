@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <app-tabla [actores]='actores' (select)='onSelect($event)'></app-tabla>
+    <div class="row">
+        <div class="col-4">
+            <app-borrar [actor]='select'></app-borrar>
+        </div>
+        <div class="col-4">
+            <app-detalle [actor]='select'></app-detalle>
+        </div>
+        <div class="col-4">
+            <app-modificar [actor]='select'></app-modificar>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,8 @@
-<div class="container">
-    <table class="table table-bordered table-dark">
-        <thead>
+
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+        <table class="table table-bordered table-dark table-striped">
+            <thead>
             <tr>
                 <th scope="col">NOMBRE</th>
                 <th scope="col">REGION</th>
@@ -13,9 +15,9 @@
                 <td>{{pais.region}}</td>
                 <td><img [src]="pais.flag" alt="" class='imagen'></td>
                 <!-- <td><button class="btn btn-success mx-auto d-block" (click)='onBorrar(usuario)'>Borrar</button></td>
-                <td><button class="btn btn-success mx-auto d-block" (click)='onModificar(usuario)'>Modificar</button></td>
-                <td class=""><button class="btn btn-success mx-auto d-block" (click)='onDetalle(usuario)'>Detalle</button></td> -->
-            </tr>
-        </tbody>
-    </table>
-</div>
+                    <td><button class="btn btn-success mx-auto d-block" (click)='onModificar(usuario)'>Modificar</button></td>
+                    <td class=""><button class="btn btn-success mx-auto d-block" (click)='onDetalle(usuario)'>Detalle</button></td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>

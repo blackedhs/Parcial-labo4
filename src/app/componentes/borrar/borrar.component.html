@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-12 text-center">
-        <h2>DETALLE</h2>
+        <h2>BORRAR</h2>
     </div>
 </div>
 <div class="row">
@@ -31,5 +31,10 @@
 <div class="row">
     <div class="col-12">
         <img *ngIf="actor.foto != ''" [src]='actor.foto' alt="" class="imagen">
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <button class="btn btn-danger btn-block" (click)='onBorrar()'> Borrar</button>
     </div>
 </div>

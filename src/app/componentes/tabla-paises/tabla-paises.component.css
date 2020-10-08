@@ -4,3 +4,11 @@
   max-width: 20px;
   max-height: 20px;
 }
+.my-custom-scrollbar {
+  position: relative;
+  height: 500px;
+  overflow: auto;
+  }
+  .table-wrapper-scroll-y {
+  display: block;
+  }

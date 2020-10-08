@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Actor } from 'src/app/clases/actor';
 import { Usuario } from 'src/app/clases/usuario';
 import { MidbService } from 'src/app/servicio/midb.service';
 
@@ -8,21 +9,23 @@ import { MidbService } from 'src/app/servicio/midb.service';
   styleUrls: ['./modificar.component.css']
 })
 export class ModificarComponent implements OnInit {
-  @Input()  public user = new Usuario();
+  @Input()  public actor = new Actor();
   constructor(public db: MidbService) { }
 
   ngOnInit(): void {
-    this.db.getdb('paises');
   }
   onModificar(objeto:object){
-    const x = objeto as Usuario;
+    const x = objeto as Actor;
     this.db.updatedb(x.$key,{
       nombre: x.nombre,
       apellido: x.apellido,
-      email: x.email
+      sexo: x.sexo,
+      fecha: x.fecha,
+      nacionalidad: x.nacionalidad
     });
+    this.onCancel();
   }
   onCancel(){
-    this.user = new Usuario();
+    this.actor = new Actor();
   }
 }

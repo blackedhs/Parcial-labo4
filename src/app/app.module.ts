@@ -16,6 +16,8 @@ import { DetalleComponent } from './componentes/detalle/detalle.component';
 import { ModificarComponent } from './componentes/modificar/modificar.component';
 import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 import { AltaActorComponent } from './componentes/alta-actor/alta-actor.component';
+import { ActorlistadoComponent } from './componentes/actorlistado/actorlistado.component';
+import { BorrarComponent } from './componentes/borrar/borrar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { AltaActorComponent } from './componentes/alta-actor/alta-actor.componen
     DetalleComponent,
     ModificarComponent,
     TablaPaisesComponent,
-    AltaActorComponent
+    AltaActorComponent,
+    ActorlistadoComponent,
+    BorrarComponent
   ],
   imports: [
     BrowserModule,

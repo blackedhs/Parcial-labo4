@@ -1,4 +1,5 @@
 export class Actor {
+    $key:string
     id:number
     nombre:string
     apellido:string

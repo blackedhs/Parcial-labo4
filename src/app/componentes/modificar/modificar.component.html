@@ -5,22 +5,35 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-3">
+    <div class="col-5">
         <label class="label-control">Nombre</label>
     </div>
-    <input type="text" [(ngModel)]='user.nombre'>
+    <input type="text" [(ngModel)]='actor.nombre'>
 </div>
 <div class="row">
-    <div class="col-3">
+    <div class="col-5">
         <label class="label-control">Apellido</label>
     </div>
-    <input type="text" [(ngModel)]='user.apellido'>
+    <input type="text" [(ngModel)]='actor.apellido'>
 </div>
 <div class="row">
-    <div class="col-3">
-        <label class="label-control">Email</label>
+    <div class="col-5">
+        <label class="label-control">Sexo</label>
     </div>
-    <input type="text" [(ngModel)]='user.email'>
+    <input type="text" [(ngModel)]='actor.sexo'>
 </div>
-<button class="btn btn-primary btn-block mt-2" (click)='onModificar(user)'>Modificar</button>
+<div class="row">
+    <div class="col-5">
+        <label class="label-control">Fecha de Nacimiento</label>
+    </div>
+    <input type="date" [(ngModel)]='actor.fecha'>
+</div>
+<div class="row">
+    <div class="col-5">
+        <label class="label-control">Nacionalidad</label>
+    </div>
+    <input type="text" [(ngModel)]='actor.nacionalidad'>
+</div>
+
+<button class="btn btn-primary btn-block mt-2" (click)='onModificar(actor)'>Modificar</button>
 <button class="btn btn-secondary btn-block mt-2" (click)='onCancel()'>Cancelar</button>
