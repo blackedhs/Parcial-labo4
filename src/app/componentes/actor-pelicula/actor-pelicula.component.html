@@ -1,1 +1,13 @@
-<p>actor-pelicula works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+    <app-tabla [actores]='actores' (select)='onSelect($event)'></app-tabla>
+</div>
+<div class="container" *ngIf='show'>
+    <div class="row">
+        <div class="col-4">
+            <app-tabla-peliculas [peliculas]='peliculas'></app-tabla-peliculas>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+    </div>
+</div>

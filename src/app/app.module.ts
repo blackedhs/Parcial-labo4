@@ -20,6 +20,7 @@ import { ActorlistadoComponent } from './componentes/actorlistado/actorlistado.c
 import { BorrarComponent } from './componentes/borrar/borrar.component';
 import { PeliculaAltaComponent } from './componentes/pelicula-alta/pelicula-alta.component';
 import { ActorPeliculaComponent } from './componentes/actor-pelicula/actor-pelicula.component';
+import { TablaPeliculasComponent } from './componentes/tabla-peliculas/tabla-peliculas.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ActorPeliculaComponent } from './componentes/actor-pelicula/actor-pelic
     ActorlistadoComponent,
     BorrarComponent,
     PeliculaAltaComponent,
-    ActorPeliculaComponent
+    ActorPeliculaComponent,
+    TablaPeliculasComponent
   ],
   imports: [
     BrowserModule,
