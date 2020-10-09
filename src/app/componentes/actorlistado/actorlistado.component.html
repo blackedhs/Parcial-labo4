@@ -3,13 +3,13 @@
     <app-tabla [actores]='actores' (select)='onSelect($event)'></app-tabla>
     <div class="row">
         <div class="col-4">
-            <app-borrar [actor]='select'></app-borrar>
+            <app-borrar [actor]='select' (limpiar)='onLimpiar()'></app-borrar>
         </div>
         <div class="col-4">
-            <app-detalle [actor]='select'></app-detalle>
+            <app-detalle [actor]='select'(limpiar)='onLimpiar()'></app-detalle>
         </div>
         <div class="col-4">
-            <app-modificar [actor]='select'></app-modificar>
+            <app-modificar [actor]='select' (limpiar)='onLimpiar()'></app-modificar>
         </div>
     </div>
 </div>

@@ -29,4 +29,7 @@ export class ActorlistadoComponent implements OnInit {
   onSelect(object){
     this.select = object;
   }
+  onLimpiar(){
+    this.select = new Actor();
+  }
 }

@@ -16,7 +16,7 @@ export class AltaActorComponent implements OnInit {
   ngOnInit(): void {
   }
   onGuardar() {
-    this.db.getdb('actores').snapshotChanges().subscribe(element =>
+    this.db.getdb('peliculas').snapshotChanges().subscribe(element =>
       element.forEach(()=>
       this.count++
       ));

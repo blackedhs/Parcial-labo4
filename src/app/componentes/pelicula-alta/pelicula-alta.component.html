@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row ">
+                <div class="col-12 text-center">
+            <h2>ALTA PELICULA</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label class="label-control">Nombre</label>
+        </div>
+        <input type="text" [(ngModel)]='pelicula.nombre'>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label class="label-control">Genero</label>
+        </div>
+        <input type="text" [(ngModel)]='pelicula.genero'>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label class="label-control">Actor</label>
+        </div>
+        <input type="text" [(ngModel)]='pelicula.actor' disabled>
+    </div>
+    <button class="btn btn-primary btn-block mt-2" (click)='onGuardar()'>Guardar</button>
+    </div>
+    <div class="col-6">
+        <app-tabla [actores]='listado' (select)='onTabla($event)'></app-tabla>
+    </div>
+    </div>
+    
+</div>
